@@ -84,7 +84,7 @@ export const NewPasswordForm = () => {
           <FormError message={error} />
           <FormSuccess message={success} />
           <Button
-            isDisabled={isPending}
+            disabled={isPending}
             type="submit"
             className="w-full"
           >

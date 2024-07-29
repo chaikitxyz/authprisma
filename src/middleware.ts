@@ -17,10 +17,6 @@ export default auth((req) => {
   const isPublicRoute = publicRoutes.some(route => nextUrl.pathname.startsWith(route));
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
 
-  if (nextUrl.pathname === "/docs") {
-    return Response.redirect(new URL("/docs/introduction", nextUrl));
-  }
-
   if (isApiAuthRoute) {
     return null;
   }

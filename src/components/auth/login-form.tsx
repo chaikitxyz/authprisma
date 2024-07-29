@@ -136,11 +136,10 @@ export const LoginForm = () => {
                       </FormControl>
                       <Button
                         size="sm"
-                        variant="outline"
-                        href="/auth/reset"
+                        variant="link"
                         className="px-0 font-normal"
                       >
-                          Forgot password?
+                        <Link href="/auth/reset">Forgot password?</Link>
                       </Button>
                       <FormMessage />
                     </FormItem>
@@ -152,7 +151,7 @@ export const LoginForm = () => {
           <FormError message={error || urlError} />
           <FormSuccess message={success} />
           <Button
-            isDisabled={isPending}
+            disabled={isPending}
             type="submit"
             className="w-full"
           >
